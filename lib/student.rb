@@ -39,7 +39,7 @@ class Student
     self.new(row[0], row[1], row[2])
   end
 
-  def find_by_name(name)
+  def self.find_by_name(name)
     DB[:conn].execute("SELECT * FROM students WHERE name = ?", name).map {|row| self.new_from_db(row)}.first
   end
 
