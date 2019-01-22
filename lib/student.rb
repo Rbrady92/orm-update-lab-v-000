@@ -31,7 +31,7 @@ class Student
     student.save
   end
 
-  def self.new_from_db(info_arr)
+  def self.new_from_db(row)
     self.new(row[0], row[1], row[2])
   end
 
