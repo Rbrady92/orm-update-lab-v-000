@@ -43,4 +43,8 @@ class Student
     DB[:conn].execute("SELECT * FROM students WHERE name = ?", name).map {|row| self.new_from_db(row)}.first
   end
 
+  def update 
+    self.save 
+  end 
+
 end
